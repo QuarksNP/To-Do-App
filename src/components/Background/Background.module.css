@@ -1,0 +1,24 @@
+.backgroundContainer{
+    @apply
+    absolute
+    w-full
+    brightness-75
+}
+
+.backgroundContainer:before{
+    background: linear-gradient(to right, hsl(220, 97%, 64%), hsl(280, 88%, 60%));
+    @apply
+    content-['']
+    absolute
+    w-full
+    h-full
+    opacity-50
+    z-10
+}
+
+.background{
+    @apply
+    w-full
+    h-[300px]
+    object-cover 
+}

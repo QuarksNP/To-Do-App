@@ -1,0 +1,15 @@
+.header{
+    @apply
+    relative
+    grid
+    grid-flow-col
+    p-5
+    text-white
+    text-3xl
+    tracking-widest
+}
+
+.button{
+    @apply
+    justify-self-end
+}
