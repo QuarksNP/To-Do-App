@@ -1,0 +1,27 @@
+.todo{
+    @apply
+    flex
+    justify-between
+    items-center
+    border-b
+    border-VeryDarkGrayishBlue
+    p-5
+}
+
+.taskDesc{
+    @apply
+    flex
+    gap-5
+    text-white
+}
+
+.checkTask{
+    @apply
+    w-5
+}
+
+.btnRemove{
+    @apply
+    text-xl
+    text-DarkGrayishBlue
+}

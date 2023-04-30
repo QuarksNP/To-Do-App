@@ -1,0 +1,40 @@
+.form{
+    @apply
+    relative
+    p-5
+    flex
+    flex-col
+    gap-10
+    border
+}
+.createTodoContainer{
+    @apply
+    bg-VeryDarkDesaturatedBlue
+    grid
+    grid-flow-col
+    p-3
+    rounded-md
+    text-white
+}
+
+.createTodo{
+    @apply
+    bg-transparent
+    outline-none
+    p-2
+}
+
+.btnCreate{
+    background: linear-gradient(80deg, hsl(220, 97%, 64%), hsl(280, 88%, 60%));
+    @apply
+    justify-self-end
+    rounded-md
+    py-2
+    px-5 
+}
+
+.todoListContainer{
+    @apply
+    rounded-md
+    bg-VeryDarkDesaturatedBlue
+}

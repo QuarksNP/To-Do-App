@@ -1,0 +1,11 @@
+.filtersContainer{
+    @apply
+    bg-VeryDarkDesaturatedBlue
+    text-DarkGrayishBlue
+    font-bold
+    flex
+    justify-center
+    gap-5
+    p-5
+    rounded-md
+}
