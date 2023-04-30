@@ -1,0 +1,8 @@
+.footer{
+    @apply
+    text-VeryDarkGrayishBlue
+    flex
+    justify-center
+    mt-10
+    text-lg
+}
