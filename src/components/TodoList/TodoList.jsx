@@ -1,5 +1,6 @@
 import Todo from "../common/Task/Todo"
 import Filters from "../common/Filters/Filters"
+import Info from "../common/Info/Info"
 import styles from "./TodoList.module.css"
 
 export default function TodoList(){
@@ -16,6 +17,8 @@ export default function TodoList(){
                 <Todo task={'Hello world!'} />
                 <Todo task={'Hello world!'} />
                 <Todo task={'Hello world!'} />
+
+                <Info items={5} />
             </div>
 
             <Filters />

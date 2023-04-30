@@ -1,0 +1,7 @@
+.info{
+    @apply
+    flex
+    justify-between
+    text-DarkGrayishBlue
+    p-5
+}
