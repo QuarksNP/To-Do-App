@@ -6,12 +6,15 @@ import Footer from "./components/Footer/Footer"
 function App() {
 
   return (
-    <main className="relative">
-      <Background />
+  <>
+    <Background />
+    
+    <main className="md:w-[90vh]">
       <Header />
       <TodoList />
       <Footer />
     </main>
+  </>
   )
 }
 

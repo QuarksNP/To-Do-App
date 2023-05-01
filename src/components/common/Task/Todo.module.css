@@ -5,19 +5,19 @@
     items-center
     border-b
     border-VeryDarkGrayishBlue
-    p-5
+    p-4
 }
 
 .taskDesc{
     @apply
     flex
-    gap-5
+    gap-4
     text-white
 }
 
 .checkTask{
     @apply
-    w-5
+    w-4
 }
 
 .btnRemove{

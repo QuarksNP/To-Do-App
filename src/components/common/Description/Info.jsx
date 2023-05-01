@@ -3,7 +3,7 @@ import styles from './Info.module.css'
 export default function Info({ items }){
     return (
         <div className={styles.info}>
-            <h2>{items} items left</h2>
+            <p>{items} items left</p>
             <button>Clear Completed</button>
         </div>
     )
