@@ -18,35 +18,31 @@
 .checkTask{
     @apply
     relative
+    w-7
+    h-7
     flex
     items-center
     justify-center
-    w-7
-    h-7
     appearance-none
     cursor-pointer
-    outline-none
-    border-2
+    border
+    border-VeryDarkGrayishBlue
     rounded-full
+    transition-all
+    duration-200
+    ease-in-out
+    focus:outline-none
 }
 
-.checkTask:checked::before{
-    background: linear-gradient(to right, hsl(220, 97%, 64%), hsl(280, 88%, 60%));
+.checkTask:checked{
     @apply
-    content-[""]
-    absolute
-    text-white
-    w-full
-    h-full
-    rounded-full  
+    bg-BrightBlue
+    border-transparent
 }
-
 .checkTask:checked::after{
     @apply
     content-["\2714"]
-    absolute
 }
-
 
 .btnRemove{
     @apply

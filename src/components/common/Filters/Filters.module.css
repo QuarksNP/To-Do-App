@@ -9,3 +9,9 @@
     p-4
     rounded-md
 }
+
+.active{
+    @apply
+    duration-200
+    focus:text-BrightBlue
+}
