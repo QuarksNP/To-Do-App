@@ -17,8 +17,36 @@
 
 .checkTask{
     @apply
-    w-4
+    relative
+    flex
+    items-center
+    justify-center
+    w-7
+    h-7
+    appearance-none
+    cursor-pointer
+    outline-none
+    border-2
+    rounded-full
 }
+
+.checkTask:checked::before{
+    background: linear-gradient(to right, hsl(220, 97%, 64%), hsl(280, 88%, 60%));
+    @apply
+    content-[""]
+    absolute
+    text-white
+    w-full
+    h-full
+    rounded-full  
+}
+
+.checkTask:checked::after{
+    @apply
+    content-["\2714"]
+    absolute
+}
+
 
 .btnRemove{
     @apply
