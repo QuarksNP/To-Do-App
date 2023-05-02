@@ -6,14 +6,15 @@
     flex-col
     gap-5
 }
+
 .createTodoContainer{
     @apply
-    bg-VeryDarkDesaturatedBlue
+    bg-VeryLightGray
+    transition-colors
     grid
     grid-flow-col
     p-3
     rounded-md
-    text-white
 }
 
 .createTodo{
@@ -26,6 +27,8 @@
 .btnCreate{
     background: linear-gradient(80deg, hsl(220, 97%, 64%), hsl(280, 88%, 60%));
     @apply
+    text-VeryLightGray
+    transition-colors
     justify-self-end
     rounded-md
     py-2
@@ -34,6 +37,8 @@
 
 .todoListContainer{
     @apply
+    bg-VeryLightGray
+    transition-colors
+    text-VeryDarkBlue
     rounded-md
-    bg-VeryDarkDesaturatedBlue
 }

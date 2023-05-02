@@ -3,9 +3,15 @@ import styles from './Todo.module.css'
 
 export default function Todo({ task }){
     return(
-        <div className={styles.todo}>
+        <div className={`dark:border-VeryDarkGrayishBlue
+                            ${styles.todo}`}>
+                                
             <div className={styles.taskDesc}>
-                <input className={styles.checkTask} type="checkbox"/>
+                <input className={`dark:border-VeryDarkGrayishBlue
+                                    dark:text-VeryDarkBlue
+                                    ${styles.checkTask}`
+                            }
+                type="checkbox"/>
                 <label>{task}</label>
             </div>
             

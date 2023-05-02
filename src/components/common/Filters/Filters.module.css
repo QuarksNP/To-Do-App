@@ -1,6 +1,6 @@
 .filtersContainer{
     @apply
-    bg-VeryDarkDesaturatedBlue
+    bg-VeryLightGray
     text-DarkGrayishBlue
     font-bold
     flex
@@ -8,6 +8,7 @@
     gap-4
     p-4
     rounded-md
+    transition-colors
 }
 
 .active{

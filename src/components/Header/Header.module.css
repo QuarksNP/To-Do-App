@@ -1,8 +1,8 @@
 .header{
     @apply
     relative
-    grid
-    grid-flow-col
+    flex
+    justify-between
     px-4
     py-8
     text-white
@@ -10,7 +10,3 @@
     tracking-widest
 }
 
-.button{
-    @apply
-    justify-self-end
-}
