@@ -1,9 +1,9 @@
 import {BsFillSunFill, BsFillMoonFill} from 'react-icons/bs'
-import styles from './LightMode.module.css'
+import styles from './DarkMode.module.css'
 import { useState } from 'react';
 
 
-export default function LightMode(){
+export default function DarkMode(){
     let [darkMode, setdarkMode] = useState(true)
 
     const activeDarkMode = () => {
