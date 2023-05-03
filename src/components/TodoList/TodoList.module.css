@@ -11,8 +11,8 @@
     @apply
     bg-VeryLightGray
     transition-colors
-    grid
-    grid-flow-col
+    flex
+    justify-between
     p-3
     rounded-md
 }
@@ -22,15 +22,20 @@
     bg-transparent
     outline-none
     p-2
+    w-3/4
+    text-VeryDarkBlue
+}
+
+.btnContainer{
+    @apply
+    bg-BrightBlue
+    rounded-md
+    transition-colors
 }
 
 .btnCreate{
-    background: linear-gradient(80deg, hsl(220, 97%, 64%), hsl(280, 88%, 60%));
     @apply
     text-VeryLightGray
-    transition-colors
-    justify-self-end
-    rounded-md
     py-2
     px-5 
 }

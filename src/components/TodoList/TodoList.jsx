@@ -1,13 +1,15 @@
-import Todo from "../common/Task/Todo"
+import Todo from "../common/Todo/Todo"
 import Filters from "../common/Filters/Filters"
 import Info from "../common/Info/Info"
-import { useState } from "react"
+import useCreateTodo from "../../hooks/useCreateTodo/useCreateTodo"
+import { useRef } from "react"
 import styles from "./TodoList.module.css"
 
 export default function TodoList(){
 
-    const [value, setValue] = useState()
-
+    const todo = useRef()
+    const [newTodo, addTodo] = useCreateTodo(todo)   
+    
     const handleClick = (event) => {
         event.preventDefault();
         let filter = event.target
@@ -21,23 +23,33 @@ export default function TodoList(){
         <form className={styles.form}>
             <fieldset className={`dark:bg-VeryDarkDesaturatedBlue
                                     ${styles.createTodoContainer}`}>
-                <input className={styles.createTodo} type="text" placeholder="Add a task..." />
-                <button className={styles.btnCreate}>Add</button>
+                <input className={`dark:text-VeryLightGray ${styles.createTodo}`}
+                        type="text" 
+                        placeholder="Add a task..."
+                        ref={todo}
+                         />
+                <div className={styles.btnContainer}>
+                    <button className={styles.btnCreate}
+                            type="button"
+                            onClick={addTodo}>Add</button>
+                    </div>
             </fieldset>
 
             <fieldset className={`dark:bg-VeryDarkDesaturatedBlue
                                     dark:text-VeryLightGray
                                     ${styles.todoListContainer}`}>
-                <Todo task={'Hello world!'} />
-                <Todo task={'Hello world!'} />
-                <Todo task={'Hello world!'} />
-                <Todo task={'Hello world!'} />
-                <Todo task={'Hello world!'} />
 
-                <Info items={5} />
+                {newTodo.map((todos, index) => {
+                   return(
+                        <Todo key={index} task={todos} />
+                   )
+                })}               
+
+                {newTodo.length === 0 ? <></> : <Info items={newTodo.length}/>}
             </fieldset>
 
-            <Filters active={handleClick}/>
+            {newTodo.length === 0 ? <></> :<Filters active={handleClick}/>}
+            
         </form>
     )
 }
