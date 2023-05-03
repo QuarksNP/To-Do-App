@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 
 export default function DarkMode(){
-    let [darkMode, setdarkMode] = useState(true)
+    const [darkMode, setdarkMode] = useState(false)
+    console.log(darkMode)
 
     const activeDarkMode = () => {
 
