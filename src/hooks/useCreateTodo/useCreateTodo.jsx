@@ -4,7 +4,7 @@ const useCreateTodo = (todo) => {
     const [newTodo, setNewTodo] = useState([])
 
     function addTodo(){
-        setNewTodo([...newTodo,todo.current.value])
+        setNewTodo([...newTodo, todo.current.value])
         todo.current.value = ""
     }
 
