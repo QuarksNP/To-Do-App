@@ -12,18 +12,10 @@
     bg-VeryLightGray
     transition-colors
     flex
-    justify-between
-    p-3
+    items-center
+    justify-center
+    p-4
     rounded-md
-}
-
-.createTodo{
-    @apply
-    bg-transparent
-    outline-none
-    p-2
-    w-3/4
-    text-VeryDarkBlue
 }
 
 .btnContainer{

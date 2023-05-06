@@ -4,7 +4,7 @@ export default function Info({ items }){
     return (
         <div className={styles.info}>
             <h2>{items} items left</h2>
-            <button>Clear Completed</button>
+            <button type='button'>Clear Completed</button>
         </div>
     )
 }

@@ -1,16 +1,10 @@
 import {AiOutlineClose} from 'react-icons/ai'
-import { useRef, useState } from 'react'
 import styles from './Todo.module.css'
 
-export default function Todo({ task, onRemove }){
-    
-    const checkTask = useRef()
-    const [checked, setChecked] = useState(false)
+export default function Todo({ task}){
 
-    const handleCheck  = () => {
-        setChecked(checkTask.current.checked)
-    }
-    
+
+
     return(
         <div className={`dark:border-VeryDarkGrayishBlue
                             ${styles.todo}`}>
@@ -21,16 +15,14 @@ export default function Todo({ task, onRemove }){
                                     ${styles.checkTask}`
                             }
                 type="checkbox"
-                ref={checkTask}
-                onChange={handleCheck} />
+                />
 
-                <label>{checked ? <s>{task}</s> : task}</label>
+                <label> <s>{task}</s> </label>
             </div>
             
             <button 
             className={styles.btnRemove}
             type='button'
-            onClick={onRemove}
             >
                 <AiOutlineClose />
             </button>

@@ -1,0 +1,20 @@
+.circle{
+  @apply
+  relative
+  w-7
+  h-7
+  rounded-full
+  border
+  border-LightGrayishBlue
+
+
+}
+
+.createTodo{
+    @apply
+    bg-transparent
+    outline-none
+    p-2
+    w-full
+    text-VeryDarkBlue
+}
