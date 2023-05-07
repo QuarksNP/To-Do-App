@@ -4,7 +4,7 @@ const useCompletedTodo = (todos) => {
 
     const [completedTodo, setCompletedTodo] = useState(false)
 
-    function checkedTodo( event, ID ){
+    function checkedTodo( event, ID ) {
 
         let checked = event.target.checked
 

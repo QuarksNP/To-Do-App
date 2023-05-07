@@ -2,7 +2,7 @@ import {AiOutlineClose} from 'react-icons/ai'
 import CheckTodo from '../CheckTodo/CheckTodo'
 import styles from './Todo.module.css'
 
-export default function Todo({ CheckTodos }){
+export default function Todo({ CheckTodos, onRemoveTodo }) {
 
     return(
         <div className={`dark:border-VeryDarkGrayishBlue
@@ -15,6 +15,7 @@ export default function Todo({ CheckTodos }){
             <button 
             className={styles.btnRemove}
             type='button'
+            onClick={onRemoveTodo}
             >
                 <AiOutlineClose />
             </button>
