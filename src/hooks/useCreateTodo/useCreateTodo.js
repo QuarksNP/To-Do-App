@@ -1,20 +1,20 @@
 import { useState } from "react";
 
 const useCreateTodo = () => {
-    const [todo, setTodo] = useState([]);
+    const [todos, setTodos] = useState([]);
     const [lastID, setLastID] = useState(0)
     
     const addTodo = (inputTodo) => {
        
         if(event.key.toLowerCase() === "enter" ){
             event.preventDefault();
-            setTodo([...todo, {id:lastID + 1, task:inputTodo.current.value, completed:false}]);
+            setTodos([...todos, {id:lastID + 1, task:inputTodo.value, completed:false}]);
             setLastID(lastID + 1);
-            inputTodo.current.value = "";
+            inputTodo.value = "";
         }
     }
 
-    return [todo, addTodo];
+    return [todos, addTodo];
 }
 
 export default useCreateTodo;

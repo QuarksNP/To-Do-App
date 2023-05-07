@@ -1,0 +1,29 @@
+.checkTask{
+    @apply
+    relative
+    w-7
+    h-7
+    flex
+    items-center
+    justify-center
+    appearance-none
+    cursor-pointer
+    border
+    border-LightGrayishBlue
+    text-VeryLightGray
+    rounded-full
+    transition-all
+    duration-200
+    ease-in-out
+    focus:outline-none
+}
+
+.checkTask:checked{
+    @apply
+    bg-BrightBlue
+    border-transparent
+}
+.checkTask:checked::after{
+    @apply
+    content-["\2714"]
+}

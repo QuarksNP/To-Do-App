@@ -2,20 +2,21 @@ import NewTodo from "../common/newTodo/newTodo"
 import Todo from "../common/Todo/Todo"
 import Filters from "../common/Filters/Filters"
 import Info from "../common/Info/Info"
+import CheckTodo from "../common/CheckTodo/CheckTodo"
 import useCreateTodo from "../../hooks/useCreateTodo/useCreateTodo"
+import useCompletedTodo from "../../hooks/useCompletedTodo/useCompletedTodo"
 import styles from "./TodoList.module.css"
 
 export default function TodoList(){
 
-    const [newTodo, addTodo] = useCreateTodo()
-    console.log(newTodo)
+    const [todos, addTodo] = useCreateTodo()
+    const [completedTodo, setCompletedTodo] = useCompletedTodo(todos)
  
     const handleClick = (event) => {
         event.preventDefault();
         let filter = event.target
 
         if(filter.id === "completed") {
-            test4(completedTodos)
         }
     }
 
@@ -33,8 +34,19 @@ export default function TodoList(){
                                     ${styles.todoListContainer}`}>
 
 
-            <Todo task={"Hello World"}/>
-            <Info items={newTodo.length}/>
+            {todos.map(todo => {
+                return <Todo key={todo.id}
+                                CheckTodos={ <CheckTodo todo={todo.task}
+                                                        todoID={todo.id} 
+                                                        handleChange={setCompletedTodo}
+                                                        isComplete={todo.completed}
+                                                        
+                                                        />}
+                        isComplete={todo.completed} 
+
+                    />
+            })}
+            <Info items={todos.length}/>
             </fieldset>
 
             <Filters active={handleClick}/>
