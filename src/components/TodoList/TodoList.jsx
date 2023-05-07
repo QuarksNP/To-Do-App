@@ -1,4 +1,4 @@
-import NewTodo from "../common/newTodo/newTodo"
+import AddTodo from "../common/AddTodo/AddTodo"
 import Todo from "../common/Todo/Todo"
 import Filters from "../common/Filters/Filters"
 import Info from "../common/Info/Info"
@@ -27,7 +27,7 @@ export default function TodoList(){
             <fieldset className={`dark:bg-VeryDarkDesaturatedBlue
                                     ${styles.createTodoContainer}`}>
 
-                <NewTodo captureTodo={addTodo} />   
+                <AddTodo captureTodo={addTodo} />   
 
             </fieldset>
 

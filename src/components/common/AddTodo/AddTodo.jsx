@@ -1,7 +1,6 @@
-import styles from './NewTodo.module.css'
-import { useRef } from 'react'
+import styles from './AddTodo.module.css'
 
-export default function NewTodo({captureTodo}) {
+export default function AddTodo({captureTodo}) {
 
     return(
         <>
@@ -9,7 +8,7 @@ export default function NewTodo({captureTodo}) {
             <input className={`dark:text-VeryLightGray ${styles.createTodo}`}
                     type="text" 
                     placeholder="Add a task..."
-                    onKeyDown={e => captureTodo(e.target)}
+                    onKeyDown={event => captureTodo(event)}
             />
         </>
     )

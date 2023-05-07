@@ -8,9 +8,9 @@ const useCreateTodo = () => {
        
         if(event.key.toLowerCase() === "enter" ){
             event.preventDefault();
-            setTodos([...todos, {id:lastID + 1, task:inputTodo.value, completed:false}]);
+            setTodos([...todos, {id:lastID + 1, task:inputTodo.target.value, completed:false}]);
             setLastID(lastID + 1);
-            inputTodo.value = "";
+            inputTodo.target.value = "";
         }
     }
 
